@@ -1,0 +1,5 @@
+SELECT DISTINCT ShipCountry FROM Orders
+WHERE ShipCity IN 
+(SELECT ShipCity FROM Orders
+GROUP BY ShipCity
+HAVING COUNT(*) > 2)

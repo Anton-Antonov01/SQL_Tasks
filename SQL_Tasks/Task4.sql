@@ -1,16 +1,3 @@
 SELECT TOP (1) COUNT(DISTINCT CustomerID) FROM Orders
 GROUP BY EmployeeID
 ORDER BY COUNT(DISTINCT CustomerID) DESC
-
-
-
---SELECT COUNT(DISTINCT CustomerID) FROM Orders
---WHERE EmployeeID =
---(SELECT EmployeeID FROM  Orders
---GROUP BY EmployeeID
---HAVING  COUNT(*) = 
---(SELECT  MAX(Y.X) 
---FROM
---(SELECT COUNT(*) AS X 
---FROM Orders
---GROUP BY EmployeeID) AS Y))
